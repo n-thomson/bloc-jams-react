@@ -9,9 +9,7 @@ class Album extends Component{
       album : album,
       currentSong : album.songs[0],
       isPlaying : false,
-      hoverSong : null,
-      hoverStatus: false,
-      currentIcon : 'ion-md-play'
+      hoverSong : null
     };
 
     this.audioElement = document.createElement('audio');
@@ -45,22 +43,22 @@ class Album extends Component{
     }
   }
 
-  handleIcon(song){
+  handleIcon(song, index){
     if ((this.state.currentSong === song) && (this.state.isPlaying)){
-      this.setState({currentIcon : 'ion-md-pause'});
-    } else if ((this.state.currentSong === song) && (!this.state.isPlaying) && (this.state.currentIcon === 'ion-md-pause')){
-      this.setState({currentIcon : 'ion-md-play'});
+      return <span className = 'ion-md-pause'></span>
+    } else if ((this.state.hoverSong === song)){
+      return <span className = 'ion-md-play'></span>
+    } else {
+      return <span>{`${index+1}`}</span>
     }
   }
 
   onMouseEnter(song){
     this.setState({hoverSong: song})
-    this.setState({hoverStatus : true});
   }
 
   onMouseLeave(song){
   this.setState({hoverSong : null})
-  this.setState({hoverStatus : false});
   }
 
   render(){
@@ -82,8 +80,8 @@ class Album extends Component{
           </colgroup>
           <tbody>
             {this.state.album.songs.map((song, index) => (
-              <tr className = 'song' key = {index} onClick = {() => {this.handleSongClick(song); this.handleIcon(song);}} onMouseEnter = {() => this.onMouseEnter(song)}  onMouseLeave = {() => this.onMouseLeave(song)} >
-                <td>{(this.state.hoverSong === song && this.state.hoverStatus) ? <span className = {this.state.currentIcon} ></span> : `${index+1}`}</td>
+              <tr className = 'song' key = {index} onClick = {() => this.handleSongClick(song)} onMouseEnter = {() => this.onMouseEnter(song)}  onMouseLeave = {() => this.onMouseLeave(song)} >
+                <td>{this.handleIcon(song,index)}</td>
                 <td>{song.title}</td>
                 <td>{song.duration}s</td>
               </tr>
