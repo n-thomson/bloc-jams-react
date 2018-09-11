@@ -105,6 +105,16 @@ class Album extends Component{
     this.setState({currentTime : this.audioElement.currentTime});
   }
 
+  handleVolumeChange(e){
+    this.audioElement.volume = e.target.value;
+  }
+
+  formatTime(time){
+    const min = parseInt(time/60);
+    const sec = parseInt(time%60);
+    return `${min}:${sec}`
+  }
+
   render(){
     return(
       <section className = 'album'>
@@ -141,6 +151,8 @@ class Album extends Component{
           handlePrevClick = {() => this.handlePrevClick()}
           handleNextClick = {() => this.handleNextClick()}
           handleTimeChange = {(e) => this.handleTimeChange(e)}
+          handleVolumeChange = {(e) => this.handleVolumeChange(e)}
+          formatTime = {(time) => this.formatTime(time)}
         />
       </section>
     )
