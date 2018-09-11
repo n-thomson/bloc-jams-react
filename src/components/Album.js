@@ -110,9 +110,13 @@ class Album extends Component{
   }
 
   formatTime(time){
-    const min = parseInt(time/60);
-    const sec = parseInt(time%60);
-    return `${min}:${sec}`
+    if (!time.isNaN){
+      const min = parseInt(time/60);
+      const sec = Math.round(time%60);
+      return ((sec<10) ? `${min}:0${sec}` : `${min}:${sec}`)
+    } else {
+      return "-:--";
+    }
   }
 
   render(){
@@ -137,7 +141,7 @@ class Album extends Component{
               <tr className = 'song' key = {index} onClick = {() => this.handleSongClick(song)} onMouseEnter = {() => this.onMouseEnter(song)}  onMouseLeave = {() => this.onMouseLeave(song)} >
                 <td>{this.handleIcon(song,index)}</td>
                 <td>{song.title}</td>
-                <td>{song.duration}s</td>
+                <td>{this.formatTime(song.duration)}</td>
               </tr>
             ))}
           </tbody>
