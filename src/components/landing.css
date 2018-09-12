@@ -1,12 +1,13 @@
-.App {
-  text-align: center;
+.landing{
   background: url('./assets/landing-639172-unsplash.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.navbar-inverse {
-  background-color: #0b0507;
-  border-color: #0b0507;
+div.point{
   color: #f9fbe7;
+}
+
+h2.point-title{
+  margin: 0 0;
 }
