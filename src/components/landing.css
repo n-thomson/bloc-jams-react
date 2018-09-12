@@ -1,13 +1,15 @@
-.landing{
-  background: url('./assets/landing-639172-unsplash.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 div.point{
   color: #f9fbe7;
 }
 
+div.selling-points{
+  margin-top: 15%;
+}
+
 h2.point-title{
-  margin: 0 0;
+  margin: 10px 0;
+}
+
+p.point-description{
+  margin: 10px 0;
 }

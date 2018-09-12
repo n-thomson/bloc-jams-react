@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PlayerBar from './PlayerBar';
 import albumData from './../data/albums'
+import './album.css';
 
 class Album extends Component{
   constructor(props){
@@ -123,7 +124,7 @@ class Album extends Component{
     return(
       <section className = 'album'>
         <section id = 'album-info'>
-          <img id = 'album-cover-art' src={this.state.album.albumCover} alt = {this.state.album.title}/>
+          <img id = 'album-cover-art' className ='img-thumbnail' src={this.state.album.albumCover} alt = {this.state.album.title}/>
           <div className = 'album-details'>
             <h2 id ='album-title'> {this.state.album.title} </h2>
             <h3 className = 'artist'> {this.state.album.artist} </h3>

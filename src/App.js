@@ -5,6 +5,7 @@ import Landing from './components/Landing';
 import Library from './components/Library';
 import Album from './components/Album';
 import {Navbar, Nav, NavItem} from 'react-bootstrap';
+import logo from './assets/bloc_jams_logo.png'
 
 class App extends Component {
   render() {
@@ -14,7 +15,7 @@ class App extends Component {
           <Navbar inverse collapseOnSelect>
             <Navbar.Header>
               <Navbar.Brand>
-                <a href = '/'><img src ='./assets/bloc_jams_logo.png' alt = 'Bloc Jams Logo' /></a>
+                <a href = '/'><img id='logo' src ={logo} alt = 'Bloc Jams Logo' /></a>
               </Navbar.Brand>
               <Navbar.Toggle />
             </Navbar.Header>

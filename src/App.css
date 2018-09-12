@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background: url('./assets/landing-639172-unsplash.jpg');
+  background: url(./assets/landing-639172-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -9,4 +9,12 @@
   background-color: #0b0507;
   border-color: #0b0507;
   color: #f9fbe7;
+}
+
+h1{
+  margin: 10px;
+}
+
+img#logo{
+  height: 210%;
 }
