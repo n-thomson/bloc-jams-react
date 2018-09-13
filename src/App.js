@@ -30,7 +30,6 @@ class App extends Component {
               </Nav>
             </Navbar.Collapse>
           </Navbar>
-          <h1>Bloc Jams</h1>
         </header>
         <main>
           <Route exact path = '/' component = {Landing}/>

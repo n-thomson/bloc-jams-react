@@ -3,6 +3,7 @@
   background: url(./assets/landing-639172-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .navbar-inverse {
@@ -12,9 +13,23 @@
 }
 
 h1{
-  margin: 10px;
+  vertical-align: center;
+  color: #f9fbe7;
 }
 
 img#logo{
-  height: 210%;
+  height: 150%;
+}
+
+a.navbar-brand{
+  padding-top: 0;
+}
+
+a{
+  font-size: 1.4em;
+}
+
+h1{
+  font-size: 4em;
+  padding-top: 5%;
 }

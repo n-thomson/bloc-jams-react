@@ -3,33 +3,33 @@ import React, {Component} from 'react';
 class PlayerBar extends Component{
   render(){
     return(
-      <section>
-        <section id = 'buttons'>
+      <section id = 'playerbar'>
+        <div id = 'buttons'>
           <button id = 'previous' onClick = {this.props.handlePrevClick}>
-            <span className = 'ion-md-skip-backward'></span>
+            <i className = 'fas fa-step-backward'/>
           </button>
           <button id = 'play-pause' onClick = { this.props.handleSongClick}>
-            <span className = {this.props.isPlaying ? 'ion-md-pause' : 'ion-md-play'}></span>
+            <i className = {this.props.isPlaying ? 'fas fa-pause' : 'fas fa-play'}/>
           </button>
           <button id = 'next' onClick = {this.props.handleNextClick}>
-            <span className = 'ion-md-skip-forward'></span>
+            <i className = 'fas fa-step-forward'/>
           </button>
-        </section>
+        </div>
         <section id = 'time-control'>
-          <div className = 'current-time'>{this.props.formatTime(this.props.currentTime)}</div>
+          <span className = 'current-time'>{this.props.formatTime(this.props.currentTime)}</span>
           <input
             type ='range'
             className = 'seek-bar'
-            value = {this.props.formatTime((this.props.currentTime/this.props.duration)) || 0}
+            value = {(this.props.currentTime/this.props.duration) || 0}
             max = '1'
             min = '0'
             step = '0.01'
             onChange = {this.props.handleTimeChange}
           />
-          <div className = 'total-time'>{this.props.formatTime(this.props.duration)}</div>
+          <span className = 'total-time'>{this.props.formatTime(this.props.duration)}</span>
         </section>
         <section id = 'volume-control'>
-          <div className = 'ion-md-volume-low'></div>
+          <i className = 'fas fa-volume-down'/>
           <input
             type ='range'
             className = 'seek-bar'
@@ -38,7 +38,7 @@ class PlayerBar extends Component{
             step = '0.1'
             onChange ={this.props.handleVolumeChange}
           />
-          <div className = 'ion-md-volume-high'></div>
+          <i className = 'fas fa-volume-up'/>
         </section>
       </section>
     );

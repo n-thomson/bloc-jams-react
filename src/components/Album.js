@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PlayerBar from './PlayerBar';
 import albumData from './../data/albums'
 import './album.css';
+import {Table} from 'react-bootstrap';
 
 class Album extends Component{
   constructor(props){
@@ -68,9 +69,9 @@ class Album extends Component{
 
   handleIcon(song, index){
     if ((this.state.currentSong === song) && (this.state.isPlaying)){
-      return <span className = 'ion-md-pause'></span>
+      return <i className = 'fas fa-pause-circle'/>
     } else if ((this.state.hoverSong === song)){
-      return <span className = 'ion-md-play'></span>
+      return <i className = 'fas fa-play-circle'/>
     } else {
       return <span>{`${index+1}`}</span>
     }
@@ -124,14 +125,14 @@ class Album extends Component{
     return(
       <section className = 'album'>
         <section id = 'album-info'>
-          <img id = 'album-cover-art' className ='img-thumbnail' src={this.state.album.albumCover} alt = {this.state.album.title}/>
+          <img id = 'album-cover-art' src={this.state.album.albumCover} alt = {this.state.album.title}/>
           <div className = 'album-details'>
             <h2 id ='album-title'> {this.state.album.title} </h2>
             <h3 className = 'artist'> {this.state.album.artist} </h3>
             <div id = 'release-info'> {this.state.album.releaseInfo} </div>
           </div>
         </section>
-        <table id ='song-list'>
+        <Table id ='song-list' responsive>
           <colgroup>
             <col id = 'song-number-column'/>
             <col id = 'song-title-column'/>
@@ -146,7 +147,7 @@ class Album extends Component{
               </tr>
             ))}
           </tbody>
-        </table>
+        </Table>
         <PlayerBar
           isPlaying = {this.state.isPlaying}
           currentSong = {this.state.currentSong}

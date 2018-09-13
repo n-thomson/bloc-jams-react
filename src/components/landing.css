@@ -3,13 +3,26 @@ div.point{
 }
 
 div.selling-points{
-  margin-top: 15%;
+  margin-top: 12%;
+  background-color: rgba(0,0,0,0.2);
+  min-height: 190px;
+}
+
+h1.hero-title{
+  margin: 0;
+  padding-top: 13%;
 }
 
 h2.point-title{
-  margin: 10px 0;
+  margin: 2% 0;
 }
 
 p.point-description{
-  margin: 10px 0;
+  margin: 2% 0;
+  font-size: 2rem;
+}
+
+i.fas {
+  padding-top: 4%;
+  font-size: 1.8em;
 }
