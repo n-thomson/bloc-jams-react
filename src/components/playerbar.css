@@ -1,0 +1,16 @@
+#playerbar{
+  float: left;
+  display: block;
+}
+
+section#time-control{
+  color: #f9fbe7;
+}
+
+section#volume-control{
+  color: #f9fbe7;
+}
+
+input.seek-bar{
+  width: 400px;
+}

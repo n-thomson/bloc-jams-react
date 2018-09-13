@@ -127,9 +127,9 @@ class Album extends Component{
         <section id = 'album-info'>
           <img id = 'album-cover-art' src={this.state.album.albumCover} alt = {this.state.album.title}/>
           <div className = 'album-details'>
-            <h2 id ='album-title'> {this.state.album.title} </h2>
-            <h3 className = 'artist'> {this.state.album.artist} </h3>
-            <div id = 'release-info'> {this.state.album.releaseInfo} </div>
+            <h2 id ='album-title'>{this.state.album.title} </h2>
+            <h3 className = 'artist'>{this.state.album.artist} </h3>
+            <div id = 'release-info'>{this.state.album.releaseInfo} </div>
           </div>
         </section>
         <Table id ='song-list' responsive>

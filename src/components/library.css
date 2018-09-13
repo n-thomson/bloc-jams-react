@@ -1,0 +1,13 @@
+
+.library-item{
+  float: left;
+  border: 1px doubled #0b0507;
+  height: 300px;
+  width: 300px;
+  margin: 20px 20px;
+  color: #f9fbe7;
+}
+
+img#album-cover{
+  width:250px;
+}

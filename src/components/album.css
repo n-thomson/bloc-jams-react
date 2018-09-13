@@ -1,9 +1,61 @@
-.album{
-  font-size: 1.2em;
+section#album-info{
+  display:block;
+  float: left;
+  margin-left: 5%;
+  margin-top: 3%;
 }
 
+img#album-cover-art{
+  height: 300px;
+}
 
-div.table-responsive{
-  padding: 0 40% 0 5%;
+div.album-details{
+  display: inline-block;
+  text-shadow: 1px 1px #868876;
   color: #f9fbe7;
+  min-width: 300px;
+}
+
+/* img#album-cover-art{
+  display:block;
+  float: left;
+  height: 300px;
+  margin-left: 5%;
+} */
+
+/* div.album-details{
+  display: inline-block;
+  text-shadow: 1px 1px #868876;
+  color: #f9fbe7;
+  height: 300px;
+  min-width: 300px;
+} */
+
+/* h2#album-title{
+  padding-top: 25%;
+  text-align: left
+} */
+
+
+div#release-info{
+  margin-top: 10px;
+  font-size: 1.3em;
+}
+
+/* div.table-responsive{
+  display: block;
+  width: 300px;
+  color: #f9fbe7;
+} */
+
+table#song-list{
+  display:block;
+  max-width: 60%;
+  margin-top: 10%;
+  color: #f9fbe7;
+  justify-content: center;
+}
+
+td{
+  font-size: 1.3em;
 }
