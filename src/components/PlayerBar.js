@@ -1,20 +1,21 @@
 import React, {Component} from 'react';
 import './playerbar.css';
+import {Button} from 'react-bootstrap';
 
 class PlayerBar extends Component{
   render(){
     return(
       <section id = 'playerbar'>
         <div id = 'buttons'>
-          <button id = 'previous' onClick = {this.props.handlePrevClick}>
+          <Button id = 'previous' bsSize="xsmall" onClick = {this.props.handlePrevClick}>
             <i className = 'fas fa-step-backward'/>
-          </button>
-          <button id = 'play-pause' onClick = { this.props.handleSongClick}>
+          </Button>
+          <Button id = 'play-pause' bsSize="xsmall" onClick = { this.props.handleSongClick}>
             <i className = {this.props.isPlaying ? 'fas fa-pause' : 'fas fa-play'}/>
-          </button>
-          <button id = 'next' onClick = {this.props.handleNextClick}>
+          </Button>
+          <Button id = 'next' bsSize="xsmall" onClick = {this.props.handleNextClick}>
             <i className = 'fas fa-step-forward'/>
-          </button>
+          </Button>
         </div>
         <section id = 'time-control'>
           <span className = 'current-time'>{this.props.formatTime(this.props.currentTime)}</span>

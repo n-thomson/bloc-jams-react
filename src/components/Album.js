@@ -132,34 +132,36 @@ class Album extends Component{
             <div id = 'release-info'>{this.state.album.releaseInfo} </div>
           </div>
         </section>
-        <Table id ='song-list' responsive>
-          <colgroup>
-            <col id = 'song-number-column'/>
-            <col id = 'song-title-column'/>
-            <col id = 'song-duration-column'/>
-          </colgroup>
-          <tbody>
-            {this.state.album.songs.map((song, index) => (
-              <tr className = 'song' key = {index} onClick = {() => this.handleSongClick(song)} onMouseEnter = {() => this.onMouseEnter(song)}  onMouseLeave = {() => this.onMouseLeave(song)} >
-                <td>{this.handleIcon(song,index)}</td>
-                <td>{song.title}</td>
-                <td>{this.formatTime(song.duration)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </Table>
-        <PlayerBar
-          isPlaying = {this.state.isPlaying}
-          currentSong = {this.state.currentSong}
-          currentTime = {this.state.currentTime}
-          duration = {this.state.duration}
-          handleSongClick = { () => this.handleSongClick(this.state.currentSong)}
-          handlePrevClick = {() => this.handlePrevClick()}
-          handleNextClick = {() => this.handleNextClick()}
-          handleTimeChange = {(e) => this.handleTimeChange(e)}
-          handleVolumeChange = {(e) => this.handleVolumeChange(e)}
-          formatTime = {(time) => this.formatTime(time)}
-        />
+        <section id = 'table-controls'>
+          <Table id ='song-list' responsive>
+            <colgroup>
+              <col id = 'song-number-column'/>
+              <col id = 'song-title-column'/>
+              <col id = 'song-duration-column'/>
+            </colgroup>
+            <tbody>
+              {this.state.album.songs.map((song, index) => (
+                <tr className = 'song' key = {index} onClick = {() => this.handleSongClick(song)} onMouseEnter = {() => this.onMouseEnter(song)}  onMouseLeave = {() => this.onMouseLeave(song)} >
+                  <td>{this.handleIcon(song,index)}</td>
+                  <td>{song.title}</td>
+                  <td>{this.formatTime(song.duration)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+          <PlayerBar
+            isPlaying = {this.state.isPlaying}
+            currentSong = {this.state.currentSong}
+            currentTime = {this.state.currentTime}
+            duration = {this.state.duration}
+            handleSongClick = { () => this.handleSongClick(this.state.currentSong)}
+            handlePrevClick = {() => this.handlePrevClick()}
+            handleNextClick = {() => this.handleNextClick()}
+            handleTimeChange = {(e) => this.handleTimeChange(e)}
+            handleVolumeChange = {(e) => this.handleVolumeChange(e)}
+            formatTime = {(time) => this.formatTime(time)}
+          />
+        </section>
       </section>
     )
   }

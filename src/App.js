@@ -25,7 +25,7 @@ class App extends Component {
                   Home
                 </NavItem>
                 <NavItem eventKey = {2} componentClass = {Link} href='/library' to='/library'>
-                  Collection
+                  Library
                 </NavItem>
               </Nav>
             </Navbar.Collapse>
@@ -36,6 +36,7 @@ class App extends Component {
           <Route path = '/library' component = {Library}/>
           <Route path = '/album/:slug' component = {Album}/>
         </main>
+        <footer>Photo Courtesy: Vishnu R Nair/Unsplash</footer>
       </div>
     );
   }

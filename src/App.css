@@ -13,10 +13,9 @@
 }
 
 h1{
-  vertical-align: center;
-  color: #f9fbe7;
+  /* color: #f9fbe7; */
+  color: #6d1b1f;
   font-size: 4em;
-  padding-top: 5%;
 }
 
 img#logo{
@@ -29,4 +28,13 @@ a.navbar-brand{
 
 a{
   font-size: 1.4em;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-right: 10px;
+  text-align: right;
+  color: #f9fbe7;
 }

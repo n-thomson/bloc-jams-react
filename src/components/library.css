@@ -6,8 +6,13 @@
   width: 300px;
   margin: 20px 20px;
   color: #f9fbe7;
+  text-shadow: 1px 1px #868876;
 }
 
 img#album-cover{
   width:250px;
+}
+
+div#album-title{
+  display: inline-block;
 }

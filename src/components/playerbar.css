@@ -1,16 +1,48 @@
-#playerbar{
-  float: left;
-  display: block;
-}
-
 section#time-control{
+  display: inline-block;
   color: #f9fbe7;
+  padding: 0 3%;
 }
 
 section#volume-control{
   color: #f9fbe7;
 }
 
+div#buttons{
+  /* color: rgba(11,5,7,0.4) */
+  color: rgba(62,8,10,0.4);
+  /* padding-left: 30px;
+  padding-right: 30px; */
+  float: left;
+}
+
 input.seek-bar{
-  width: 400px;
+  width: 200px;
+}
+
+span.current-time{
+    float: left;
+    width: 30px;
+    text-align: center;
+}
+
+span.current-time{
+    float: left;
+    width: 30px;
+    text-align: center;
+}
+
+span.total-time{
+    float: left;
+    width: 30px;
+    text-align: center;
+}
+
+i.fas.fa-volume-down, i.fas.fa-volume-up{
+  padding: 0 3px;
+  font-size: 1.5em;
+}
+
+button#previous, button#play-pause, button#next{
+  margin: 0 3px;
 }

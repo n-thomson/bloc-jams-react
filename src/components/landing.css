@@ -1,16 +1,23 @@
 div.point{
   color: #f9fbe7;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+div.show-grid.row{
+  position: static;
+  bottom: 10px;
+  width: 100%;
 }
 
 div.selling-points{
-  margin-top: 12%;
   background-color: rgba(0,0,0,0.2);
   min-height: 190px;
 }
 
+
 h1.hero-title{
-  margin: 0;
-  padding-top: 13%;
+  padding-top: 12%;
+  padding-bottom: 12%;
 }
 
 h2.point-title{
@@ -22,7 +29,10 @@ p.point-description{
   font-size: 2rem;
 }
 
-i.fas {
+
+i.fas.fa-music, i.fas.fa-wifi, i.fas.fa-mobile-alt{
+  color: #f9fbe7;
+  text-shadow: 2px 2px 4px #000000;
   padding-top: 4%;
   font-size: 1.8em;
 }
