@@ -124,15 +124,15 @@ class Album extends Component{
   render(){
     return(
       <section className = 'album'>
-        <section id = 'album-info'>
-          <img id = 'album-cover-art' src={this.state.album.albumCover} alt = {this.state.album.title}/>
-          <div className = 'album-details'>
-            <h2 id ='album-title'>{this.state.album.title} </h2>
-            <h3 className = 'artist'>{this.state.album.artist} </h3>
-            <div id = 'release-info'>{this.state.album.releaseInfo} </div>
-          </div>
-        </section>
-        <section id = 'table-controls'>
+        <section id = 'album-container'>
+          <section id = 'album-info'>
+            <img id = 'album-cover-art' src={this.state.album.albumCover} alt = {this.state.album.title}/>
+            <div className = 'album-details'>
+              <h2 id ='album-title'>{this.state.album.title} </h2>
+              <h3 className = 'artist'>{this.state.album.artist} </h3>
+              <div id = 'release-info'>{this.state.album.releaseInfo} </div>
+            </div>
+          </section>
           <Table id ='song-list' responsive>
             <colgroup>
               <col id = 'song-number-column'/>
@@ -149,19 +149,19 @@ class Album extends Component{
               ))}
             </tbody>
           </Table>
-          <PlayerBar
-            isPlaying = {this.state.isPlaying}
-            currentSong = {this.state.currentSong}
-            currentTime = {this.state.currentTime}
-            duration = {this.state.duration}
-            handleSongClick = { () => this.handleSongClick(this.state.currentSong)}
-            handlePrevClick = {() => this.handlePrevClick()}
-            handleNextClick = {() => this.handleNextClick()}
-            handleTimeChange = {(e) => this.handleTimeChange(e)}
-            handleVolumeChange = {(e) => this.handleVolumeChange(e)}
-            formatTime = {(time) => this.formatTime(time)}
-          />
         </section>
+        <PlayerBar
+          isPlaying = {this.state.isPlaying}
+          currentSong = {this.state.currentSong}
+          currentTime = {this.state.currentTime}
+          duration = {this.state.duration}
+          handleSongClick = { () => this.handleSongClick(this.state.currentSong)}
+          handlePrevClick = {() => this.handlePrevClick()}
+          handleNextClick = {() => this.handleNextClick()}
+          handleTimeChange = {(e) => this.handleTimeChange(e)}
+          handleVolumeChange = {(e) => this.handleVolumeChange(e)}
+          formatTime = {(time) => this.formatTime(time)}
+        />
       </section>
     )
   }
