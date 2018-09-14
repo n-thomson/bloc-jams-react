@@ -30,6 +30,7 @@ div#release-info{
 section#table-controls{
   display: flex;
   margin: 5% 5% 0 7%;
+  overflow-x: hidden;
 }
 
 table#song-list{
